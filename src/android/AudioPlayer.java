@@ -714,7 +714,6 @@ public class AudioPlayer implements OnCompletionListener, OnPreparedListener, On
     }
 
     private void sendStatusChange(int messageType, Integer additionalCode, Float value) {
-
         if (additionalCode != null && value != null) {
             throw new IllegalArgumentException("Only one of additionalCode or value can be specified, not both");
         }
