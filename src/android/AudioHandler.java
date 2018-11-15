@@ -179,6 +179,10 @@ public class AudioHandler extends CordovaPlugin {
             callbackContext.sendPluginResult(new PluginResult(status, f));
             return true;
         }
+        else if (action.equals("setRate")) {
+            this.setRate(args.getString(0), Float.parseFloat(args.getString(1)));
+            return true;
+        }
         else { // Unrecognized action.
             return false;
         }
